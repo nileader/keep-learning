@@ -5,7 +5,7 @@ license: MIT-0
 compatibility: "Requires local filesystem access and git (optional, for auto-pull)."
 metadata:
   author: nileader
-  version: "0.0.1"
+  version: "0.0.2"
   repository: https://github.com/nileader/keep-learning
 ---
 

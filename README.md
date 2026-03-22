@@ -3,7 +3,7 @@
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-compatible-blue)](https://agentskills.io)
 [![License](https://img.shields.io/badge/License-MIT--0-green.svg)](LICENSE)
 [![ClawdHub](https://img.shields.io/badge/ClawdHub-available-orange)](https://clawhub.ai/)
-[![Version](https://img.shields.io/badge/version-0.0.1-blue)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-0.0.2-blue)](CHANGELOG.md)
 
 Learn and memorize knowledge from local directories. Transform your knowledge base into agent memory.
 
