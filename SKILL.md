@@ -1,6 +1,6 @@
 ---
 name: keep-learning
-description: "Learn and memorize knowledge from local directories. Supports Markdown and code files. Extracts key insights, builds knowledge index, and stores in agent memory. Trigger with '持续学习知识' or 'continuous learning'."
+description: "Learn and memorize knowledge from local directories. Supports Markdown and code files. Extracts key insights, builds knowledge index, and stores in agent memory. Trigger with '持续学习知识' or 'keep learning'."
 license: MIT-0
 compatibility: "Requires local filesystem access and git (optional, for auto-pull)."
 metadata:
@@ -9,7 +9,7 @@ metadata:
   repository: https://github.com/nileader/keep-learning
 ---
 
-# Continuous Learning
+# Keep Learning
 
 Learn knowledge from local directories and store it in agent memory for future reference.
 
@@ -17,7 +17,7 @@ Learn knowledge from local directories and store it in agent memory for future r
 
 Activate this skill when user says:
 - "持续学习知识"
-- "continuous learning"
+- "keep learning"
 - "learn knowledge base"
 - "学习知识库"
 

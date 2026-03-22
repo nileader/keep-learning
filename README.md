@@ -1,4 +1,4 @@
-# Continuous Learning
+# Keep Learning
 
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-compatible-blue)](https://agentskills.io)
 [![License](https://img.shields.io/badge/License-MIT--0-green.svg)](LICENSE)
@@ -33,7 +33,7 @@ Simply tell your agent:
 
 or
 
-    continuous learning
+    keep learning
 
 ### First Time Setup
 
