@@ -17,7 +17,18 @@ Learn and memorize knowledge from local directories. Transform your knowledge ba
 
 ## Installation
 
-### Via ClawdHub (Recommended)
+### Via Skills CLI (Recommended)
+
+    npx skills add nileader/keep-learning
+
+Or with options:
+
+    npx skills add nileader/keep-learning -g -y
+
+- `-g` Install globally (available across all projects)
+- `-y` Skip confirmation prompts
+
+### Via ClawdHub
 
     clawdhub install keep-learning
 

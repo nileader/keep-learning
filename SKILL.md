@@ -65,9 +65,12 @@ All runtime data is stored in ~/.keep-learning/:
 
 ### Step 1: Get Configuration
 
-First time users must specify knowledge base path (e.g., ~/knowledge/work-assistant).
-Store configuration in memory using update_memory with category project_environment_configuration.
-For returning users, retrieve config from memory first.
+First, search memory (category: project_environment_configuration) for an existing knowledge base path.
+
+- If found: confirm the path with the user before proceeding. Example: "Found your knowledge base at `~/knowledge/work-assistant`. Start learning from there?"
+- If NOT found: **stop and ask the user** to provide the knowledge base path before doing anything else. Do NOT proceed until the user provides a valid path. Example: "Please provide the path to your knowledge base directory (e.g., ~/knowledge/work-assistant)."
+
+Once confirmed, store the path in memory using update_memory with category project_environment_configuration.
 
 ### Step 2: Git Pull (If Applicable)
 
@@ -79,8 +82,19 @@ Scan for supported files. Exclude: .git, node_modules, .obsidian, __pycache__, .
 
 ### Step 4: Detect Changes (Incremental Learning)
 
-If git repository, use git diff to find changed files since last learning.
-Store last commit hash in ~/.keep-learning/last-commit
+For git repositories, detect ALL types of changes:
+
+1. **Committed changes**: Compare current HEAD with last-commit hash stored in `~/.keep-learning/last-commit` using `git diff <last-commit> HEAD --name-only`
+2. **Uncommitted changes**: Detect modified/added files in working directory using `git status --porcelain`
+
+Combine both results to get the full list of changed files. This ensures learning happens even when:
+- Remote has no updates, but local files were edited
+- Local commits exist that haven't been pushed yet
+- Files are modified but not yet committed
+
+After learning completes, update `~/.keep-learning/last-commit` with current HEAD hash.
+
+For non-git directories: scan all supported files (no incremental detection).
 
 ### Step 5: Read and Extract Knowledge
 
